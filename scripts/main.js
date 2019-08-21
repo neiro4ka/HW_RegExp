@@ -50,7 +50,7 @@ class NewForm {
 }
 
 window.onload = () => {
-    document.getElementById('valid-btn').addEventListener('click', () => {
+    document.getElementById('check-btn').addEventListener('click', () => {
         let validForm = new NewForm();
         validForm._check();
     })

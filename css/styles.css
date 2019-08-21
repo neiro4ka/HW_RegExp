@@ -1,0 +1,22 @@
+.form-text {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.form-text input {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+}
+
+.error {
+    box-shadow: 0 0 10px rgb(255, 0, 0);   
+}
+
+textarea {
+    display: block;
+}

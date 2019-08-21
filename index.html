@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <form name="text" method="POST" class="form-text" id="form">
+        <label for="user-name">Введите ваше имя:</label>
+        <input type="text" name="user-name" size="35" id="user-name" required>
+        <label for="user-phone">Введите ваш телефон в формате +7(999)999-9999:</label>
+        <input type="phone" name="user-phone" id="user-phone" required>
+        <label for="user-mail">Введите вашу электронную почту:</label>
+        <input type="email" name="user-mail" id="user-mail" required>
+        <label for="user-text">Введите ваш текст:</label>
+        <textarea name="user-text" id="user-text" required></textarea>
+        <input type="button" value="Отправить" id="valid-btn">
+    </form>
+
+    <script>
+    let text= "Пример текста с 'двойными' кавычками, которые нужно заменить и с о'динарными, которые не нужно";
+    console.log(`Было: ${text}`);
+    let result = text.replace(/'/g, function(match, i){ 
+        if ( /[a-zA-Zа-яА-Я]/.test(text[i-1]) && /[a-zA-Zа-яА-Я]/.test(text[i+1]) ) {
+            return "'"
+        } else {
+            return '"'
+        }
+    });
+console.log(`Cтало: ${result}`);
+    </script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
